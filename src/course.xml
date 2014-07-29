@@ -1,5 +1,7 @@
 <problem display_name="webGLDemo">
 <script type="loncapa/python">
+<![CDATA[
+]]>
 </script>
 <p>
 The shapes below can be selected (yellow) or unselected (cyan).

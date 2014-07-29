@@ -19,7 +19,7 @@ SRC_PYTHON=src/lib.py src/main.py
 
 # insert python inline after the open script tag
 $(DIR_OUTPUT)/$(XML_COURSE): $(DIR_OUTPUT)/$(OBJ_PYTHON) $(DIR_INPUT)/$(XML_COURSE)
-	sed '/<script type="loncapa\/python">/r $<' $(DIR_INPUT)/$(XML_COURSE) > $(DIR_OUTPUT)/$(XML_COURSE)
+	sed '/<!\[CDATA\[/r $<' $(DIR_INPUT)/$(XML_COURSE) > $(DIR_OUTPUT)/$(XML_COURSE)
 
 # concatenate all source python files together
 $(DIR_OUTPUT)/$(OBJ_PYTHON): $(SRC_PYTHON)
